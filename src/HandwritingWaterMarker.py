@@ -53,7 +53,7 @@ def watermarker():
         # Open the original image and save it as temporary.png
         from pathlib import Path
         home_path = str(Path.home())
-        words=Image.open(home_path + '/WaterMarker/image.jpg')
+        words=Image.open(home_path + '/HandwritingWaterMarker/image.jpg')
         words.save("/opt/HandwritingWaterMarker/images/temp.png")
         
         # Open the temporary .png, set alpha and get image size
