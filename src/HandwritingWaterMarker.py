@@ -54,15 +54,15 @@ def watermarker():
         from pathlib import Path
         home_path = str(Path.home())
         words=Image.open(home_path + '/WaterMarker/image.jpg')
-        words.save("/opt/WaterMarker/images/temp.png")
+        words.save("/opt/HandwritingWaterMarker/images/temp.png")
         
         # Open the temporary .png, set alpha and get image size
-        words=Image.open("/opt/WaterMarker/images/temp.png")
+        words=Image.open("/opt/HandwritingWaterMarker/images/temp.png")
         words.putalpha(225)
         hmat,wmat = words.size
         
         # Open the watermark and resize it to the size of the original image
-        mask=Image.open('/opt/WaterMarker/src/watermark.png')
+        mask=Image.open('/opt/HandwritingWaterMarker/src/watermark.png')
         mask.putalpha(255)
         complete=mask.resize((hmat,wmat))
         
@@ -70,14 +70,14 @@ def watermarker():
         complete.paste(words,box=(0,0),mask=words)
         
         # Save the watermarked image to the WaterMarker folder
-        complete.save(home_path + '/WaterMarker/watermarkedimage.png')
+        complete.save(home_path + '/HandwritingWaterMarker/watermarkedimage.png')
         
         # Remove the temporary .png
-        path = "/opt/WaterMarker/images/temp.png"
-        os.remove("/opt/WaterMarker/images/temp.png")
+        path = "/opt/HandwritingWaterMarker/images/temp.png"
+        os.remove("/opt/HandwritingWaterMarker/images/temp.png")
         
         # Confirm the watermarked image has been saved
-        print("Your watermarked file has been saved to the WaterMarker folder in your user documents with the filename watermarkedimage.png.  Thank you for using WaterMarker")
+        print("Your watermarked file has been saved to the WaterMarker folder in your user documents with the filename watermarkedimage.png.  Thank you for using HandwritingWaterMarker")
     else:
         print("Please try again.")
 
