@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=WaterMarker
+Comment=Image watermarker for Linux
+Exec=/usr/bin/x-terminal-emulator -e "/opt/HandwritingWaterMarker/src/HandwritingWaterMarker.sh"
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/opt/HandwritingWaterMarker/src/icon.png
+Categories=GNOME;GTK;Development;
+Name[en_GB]=WaterMarker
