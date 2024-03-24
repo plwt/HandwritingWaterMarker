@@ -9,10 +9,12 @@ source venv/bin/activate
 python3 -m pip install --upgrade pip
 python3 -m pip install --upgrade Pillow
 python3 -m pip install --upgrade pathlib
+python3 -m pip install pywhatkit==4.6
+python3 -m pip install --upgrade opencv-python
 
 # make folders
 mkdir -p ~/HandwritingWaterMarker
-mkdir /opt/WaterMarker/images
+mkdir /opt/HandwritingWaterMarker/images
 
 # run the script
 python3 /opt/HandwritingWaterMarker/src/HandwritingWaterMarker.py
