@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /opt/WaterMarker
+cd /opt/HandwritingWaterMarker
 
 python3 -m venv venv
 source venv/bin/activate
